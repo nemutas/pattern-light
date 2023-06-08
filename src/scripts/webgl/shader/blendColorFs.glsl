@@ -19,7 +19,7 @@ void main() {
 
   vec3 final = mix(image * 0.03, image, light);
 
-  final = min(final + light * 0.2, vec3(1));
+  final = min(final + length(light) * 0.08, vec3(1));
 
   final *= 1.0 - uFade;
 
