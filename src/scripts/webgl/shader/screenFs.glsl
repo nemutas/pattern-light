@@ -4,6 +4,7 @@ struct Texture {
 };
 
 uniform Texture uPattern;
+uniform Texture uImage;
 uniform vec2 uMouse;
 uniform float uAspect;
 varying vec2 vUv;
@@ -15,14 +16,14 @@ vec4 getTexture(Texture tex) {
 
 void main() {
   vec3 pattern = getTexture(uPattern).rgb;
+  vec3 image = getTexture(uImage).rgb;
 
   vec2 aspect = vec2(uAspect, 1.0);
   float dist = distance(uMouse * aspect, (vUv * 2.0 - 1.0) * aspect);
   dist = 1.0 - smoothstep(0.2, 1.0, dist);
   dist = pow(dist, 2.0);
   vec3 color = mix(vec3(0), pattern, dist);
+  color *= (color + image) * 0.5;
 
   gl_FragColor = vec4(color, 1.0);
-  // gl_FragColor = vec4(pattern, 1.0);
-  // gl_FragColor = vec4(vec3(dist), 1.0);
 }

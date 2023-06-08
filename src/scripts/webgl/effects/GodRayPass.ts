@@ -12,7 +12,7 @@ export class GodRayPass extends ShaderPass {
       uniforms: {
         tDiffuse: { value: null },
         lightPosition: { value: new THREE.Vector2(0.5, 0.5) },
-        exposure: { value: 0.35 },
+        exposure: { value: 0.5 },
         decay: { value: 0.95 },
         density: { value: 1 },
         weight: { value: 1 },
