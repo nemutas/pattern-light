@@ -1,11 +1,7 @@
 # About
 
-This repository is [Three.js](https://threejs.org/) template with [Astro](https://astro.build/).
+Inspired by [PORTFOLIO || KAZ ARAHAMA :: PHOTOGRAPHER](http://www.kazarahama.jp/).
 
 https://nemutas.github.io/pattern-light/
 
-# Using
-
-- VSCode
-- [WebGL GLSL Editor](https://marketplace.visualstudio.com/items?itemName=raczzalan.webgl-glsl-editor) (v1.3.0 -> If the extension is set to glsl, errors originating from threejs built-in variables will not occur.)
-- [Prettier Plugin for Astro](https://github.com/withastro/prettier-plugin-astro)
+<img src='https://github.com/nemutas/pattern-light/assets/46724121/2090f66b-c4d7-48ff-81ed-07b80a02caa0' width='800' />
