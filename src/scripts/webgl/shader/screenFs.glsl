@@ -23,7 +23,7 @@ void main() {
   dist = 1.0 - smoothstep(0.2, 1.0, dist);
   dist = pow(dist, 2.0);
   vec3 color = mix(vec3(0), pattern, dist);
-  color *= (color + image) * 0.5;
+  color *= normalize(image + 0.01);
 
   gl_FragColor = vec4(color, 1.0);
 }

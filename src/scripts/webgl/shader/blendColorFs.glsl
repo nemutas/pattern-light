@@ -18,7 +18,8 @@ void main() {
   vec3 image = getTexture(uImage).rgb;
 
   vec3 final = mix(image * 0.03, image, light);
-  final += light.r * 0.1;
+
+  final = min(final + light * 0.2, vec3(1));
 
   final *= 1.0 - uFade;
 
