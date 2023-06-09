@@ -55,7 +55,6 @@ export class TCanvas {
       const screen = gl.getMesh<THREE.ShaderMaterial>('screen')
       const uniforms = screen.material.uniforms
       calcCoveredTextureScale(uniforms.uPattern.value.data, gl.size.aspect, uniforms.uPattern.value.scale)
-      calcCoveredTextureScale(uniforms.uImage.value.data, gl.size.aspect, uniforms.uImage.value.scale)
       uniforms.uAspect.value = gl.size.aspect
 
       effects.resize()
@@ -98,7 +97,6 @@ export class TCanvas {
     const material = new THREE.ShaderMaterial({
       uniforms: {
         uPattern: { value: { data: null, scale: new THREE.Vector2() } },
-        uImage: { value: { data: null, scale: new THREE.Vector2() } },
         uMouse: { value: new THREE.Vector2() },
         uAspect: { value: gl.size.aspect },
       },
@@ -117,9 +115,7 @@ export class TCanvas {
     const screen = gl.getMesh<THREE.ShaderMaterial>('screen')
     const uniforms = screen.material.uniforms
     uniforms.uPattern.value.data = pattern
-    uniforms.uImage.value.data = image
     calcCoveredTextureScale(uniforms.uPattern.value.data, gl.size.aspect, uniforms.uPattern.value.scale)
-    calcCoveredTextureScale(uniforms.uImage.value.data, gl.size.aspect, uniforms.uImage.value.scale)
 
     effects.setup(image)
   }

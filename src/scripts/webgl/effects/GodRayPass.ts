@@ -15,7 +15,7 @@ export class GodRayPass extends ShaderPass {
         exposure: { value: 0.5 },
         decay: { value: 0.95 },
         density: { value: 1 },
-        weight: { value: 1 },
+        weight: { value: 0.5 },
         samples: { value: 100 },
       },
       vertexShader,
